@@ -8,7 +8,8 @@ import { Container } from "react-bootstrap";
 import { AuthProvider } from "./pages/contexts/AuthContext";
 import Login from "./pages/login/Login";
 import PrivateRoute from "./pages/contexts/PrivateRoute";
-import Chat from "./pages/chat/Chat";
+import Main from "./pages/sell-product/Main";
+import BuyPage from "./pages/buy-product/BuyPage";
 
 export default () => {
   return (
@@ -19,7 +20,8 @@ export default () => {
           <Switch>
             <PrivateRoute exact path="/" component={Home} />
             <PrivateRoute exact path="/home" component={Home} />
-            <PrivateRoute exact path="/chat" component={Chat} />
+            <PrivateRoute exact path="/sell-product" component={Main} />
+            <PrivateRoute exact path="/buy-product" component={BuyPage} />
             <Container className="d-flex align-items-center justify-content-center">
               <div className="w-100" style={{ maxWidth: "500px" }}>
                 <Route exact path="/register" component={Signup} />

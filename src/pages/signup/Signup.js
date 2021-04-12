@@ -28,11 +28,10 @@ export default function Signup() {
       setLoading(true);
 
       await signup(emailRef.current.value, passwordRef.current.value);
-
-      history.push("/login");
     } catch {
       setError("Failed to create account, Password to weak");
     }
+    history.push("/");
     setLoading(false);
   }
   return (

@@ -10,8 +10,14 @@ export const Home = () => {
         <Carusela />
       </div>
       <div id="btn">
-        <a href="/chat" class="noselect">
-          Sellers Forum 
+        <a href="/sell-product" class="noselect">
+          Sell Product
+        </a>
+        <div id="circle"></div>
+      </div>
+      <div id="btn">
+        <a href="/buy-product" class="noselect">
+          Buy Product
         </a>
         <div id="circle"></div>
       </div>

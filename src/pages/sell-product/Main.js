@@ -3,11 +3,11 @@ import { useAuth } from "../contexts/AuthContext";
 import { db } from "../firebase";
 import Channel from "./Channel";
 
-export default function Chat() {
-   const { currentUser } = useAuth();
+export default function Main() {
+  const { currentUser } = useAuth();
 
   return (
-    <div >
+    <div>
       <Channel user={currentUser} db={db} />
     </div>
   );
