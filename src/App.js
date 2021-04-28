@@ -13,7 +13,10 @@ import BuyPage from "./pages/buy-product/BuyPage";
 
 export default () => {
   return (
-    <div>
+    <div
+      className="container-fluid"
+      style={{ backgroundColor: "#3B3B3B", overflow: "hidden" }}
+    >
       <AuthProvider>
         <Header />
         <Router>

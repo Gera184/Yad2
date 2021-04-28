@@ -1,18 +1,23 @@
 @import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400|Raleway:400,700,400italic,700italic);
 
-.header-con {
-  text-align: center;
-  padding: 0.5%;
-}
 .header {
   font: 20px/1.25 "Raleway", sans-serif;
   font-family: "Oswald", sans-serif;
-  color: black;
+  color: whitesmoke;
   padding: 1%;
 }
 
 a:hover {
-  color: black;
+  color: wheat;
 }
 
+@media only screen and (max-width: 600px) {
+  .header,
+  strong {
+    font: 15px/1.25 "Raleway", sans-serif;
+    font-family: "Oswald", sans-serif;
+    color: whitesmoke;
+    padding: 1%;
+  }
+}

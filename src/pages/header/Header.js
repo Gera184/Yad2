@@ -22,8 +22,8 @@ export const Header = () => {
 
   return (
     <>
-      <div className="header-con">
-        <div>
+      <div class="row">
+        <div className="col align-self-center text-center">
           <a className="header" href="/">
             Home
           </a>
@@ -38,7 +38,14 @@ export const Header = () => {
               Logout
             </a>
           ) : null}
-          <strong>{currentUser && currentUser.email}</strong>
+        </div>
+      </div>
+
+      <div className="row align-self-center text-center">
+        <div className="col">
+          <strong style={{ color: "whitesmoke" }}>
+            {currentUser && currentUser.email}
+          </strong>
         </div>
       </div>
     </>

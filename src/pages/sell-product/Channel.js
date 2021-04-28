@@ -66,87 +66,76 @@ const Channel = ({ user = null, db = null }) => {
   };
 
   return (
-    <div className="body">
-      <div class="container">
+    <div class="container contact-form">
+      <div class="contact-image">
+        <img
+          src="https://image.ibb.co/kUagtU/rocket_contact.png"
+          alt="rocket_contact"
+        />
+      </div>
+      <form method="post" onSubmit={handleonSubmit}>
+        <h3>Add product</h3>
         <div class="row">
           <div class="col-md-6">
-            <div class="card">
-              <form onsubmit={handleonSubmit} class="box">
-                <h1>add product</h1>
-
-                <input
-                  type="text"
-                  value={product}
-                  onChange={(e) => {
-                    setProduct(e.target.value);
-                  }}
-                  placeholder="Product"
-                />
-                <input
-                  type="text"
-                  value={city}
-                  onChange={(e) => {
-                    setCity(e.target.value);
-                  }}
-                  placeholder="City"
-                />
-
-                <select
-                  type="text"
-                  value={condition}
-                  onChange={(e) => {
-                    setCondition(e.target.value);
-                  }}
-                  placeholder="Product condition"
-                >
-                  <option value="excellent">Excellent</option>
-                  <option value="good">Good</option>
-                  <option value="pretty-good">Preety Good</option>
-                  <option value="bad">Bad</option>
-                </select>
-                <input
-                  type="number"
-                  value={price}
-                  onChange={(e) => {
-                    setPrice(e.target.value);
-                  }}
-                  placeholder="Price"
-                />
-                <input type="file" onChange={onFileChange} />
-                <button
-                  type="submit"
-                  disabled={!product || !city || !condition || !price}
-                  onClick={handleonSubmit}
-                >
-                  Send
-                </button>
-                <div class="col-md-12">
-                  <ul class="social-network social-circle">
-                    <li>
-                      <a class="icoFacebook" title="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="icoTwitter" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="icoGoogle" title="Google +">
-                        <i class="fab fa-google-plus"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <p>
-                  <Link to="/buy-product">All Products</Link>
-                </p>
-              </form>
+            <div class="form-group">
+              <input
+                type="text"
+                value={product}
+                onChange={(e) => {
+                  setProduct(e.target.value);
+                }}
+              />
             </div>
+            <div class="form-group">
+              <input
+                type="text"
+                value={city}
+                onChange={(e) => {
+                  setCity(e.target.value);
+                }}
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                value={price}
+                onChange={(e) => {
+                  setPrice(e.target.value);
+                }}
+              />
+            </div>
+            <div class="form-group">
+              <input type="file" onChange={onFileChange} />
+            </div>
+            <div class="form-group">
+              <select
+                type="text"
+                value={condition}
+                onChange={(e) => {
+                  setCondition(e.target.value);
+                }}
+                placeholder="Product condition"
+              >
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="pretty-good">Preety Good</option>
+                <option value="bad">Bad</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button
+                type="submit"
+                disabled={!product || !city || !condition || !price}
+              >
+                Send
+              </button>
+            </div>
+            <p>
+              <Link to="/buy-product">All Products</Link>
+            </p>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
