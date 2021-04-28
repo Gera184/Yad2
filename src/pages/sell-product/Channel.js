@@ -81,6 +81,7 @@ const Channel = ({ user = null, db = null }) => {
               <input
                 type="text"
                 value={product}
+                placeholder="Product"
                 onChange={(e) => {
                   setProduct(e.target.value);
                 }}
@@ -90,6 +91,7 @@ const Channel = ({ user = null, db = null }) => {
               <input
                 type="text"
                 value={city}
+                placeholder="City"
                 onChange={(e) => {
                   setCity(e.target.value);
                 }}
@@ -98,6 +100,7 @@ const Channel = ({ user = null, db = null }) => {
             <div class="form-group">
               <input
                 type="number"
+                placeholder="Price"
                 value={price}
                 onChange={(e) => {
                   setPrice(e.target.value);
